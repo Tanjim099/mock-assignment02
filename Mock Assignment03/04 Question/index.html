@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Navbar styles */
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .navbar-menu {
+      display: flex;
+    }
+
+    .navbar-menu-item {
+      margin-left: 10px;
+      color: #fff;
+    }
+
+    /* Hamburger menu styles */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    .hamburger-bar {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+      }
+
+      .navbar-menu-item {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <span class="navbar-brand">My Website</span>
+    <div class="navbar-menu">
+      <a href="#" class="navbar-menu-item">Home</a>
+      <a href="#" class="navbar-menu-item">About</a>
+      <a href="#" class="navbar-menu-item">Services</a>
+      <a href="#" class="navbar-menu-item">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      var navbarMenu = document.querySelector('.navbar-menu');
+      navbarMenu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

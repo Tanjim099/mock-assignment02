@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #inputBox {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+    <input type="text" id="inputBox">
+  <button onclick="addInput()">Submit</button>
+  <ul id="outputList"></ul>
+    <script>
+    function addInput() {
+      var inputBox = document.getElementById('inputBox');
+      var inputValue = inputBox.value;
+
+      if (inputValue.trim() !== '') {
+        var outputList = document.getElementById('outputList');
+        var listItem = document.createElement('li');
+        listItem.textContent = inputValue;
+        outputList.appendChild(listItem);
+        inputBox.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
